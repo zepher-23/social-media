@@ -1,0 +1,325 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#logo {
+  flex-grow: 1;
+  color: #00ffbf;
+  margin-left: 90px;
+
+
+}
+
+.hide-sidebar {
+  transform: translateX(-20vw);
+}
+
+.pointer {}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.flx {
+  display: flex;
+}
+
+.flx-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flx-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flx-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flx-center-h {
+  align-items: center;
+}
+
+.flx-center-v {
+  justify-content: center;
+}
+
+.primary {
+  color: #00ffbf;
+}
+
+.bg-black {
+  background-color: rgb(43, 43, 43);
+}
+
+.bg-primary {
+  background-color: #00ffbf;
+}
+
+.text-primary {
+  font-weight: 100;
+  color: rgb(50, 50, 50);
+}
+
+.text-sec {
+  font-weight: 100;
+  color: aliceblue;
+}
+
+.nav-options {
+
+  width: 20vw;
+  margin-right: 90px;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.p-3 {
+  padding: 30px;
+}
+
+.p-4 {
+  padding: 40px;
+}
+
+.p-5 {
+  padding: 50px;
+}
+
+#header {
+  width: 100%;
+  background-color: rgb(43, 43, 43);
+  height: 10vh;
+
+
+
+}
+
+/* ...............  SIDEBAR  ............... */
+
+#sidebar {
+  position: fixed;
+  top: 10vh;
+  height: 100%;
+  width: 20vw;
+  background-color: rgb(50, 50, 50);
+  transition: 0.3s ease-in-out;
+}
+
+
+
+/* .................. FEED ................... */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(55, 55, 55);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(43, 43, 43);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(47, 47, 47);
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  transition: 0.3s ease-in-out;
+
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(47, 47, 47);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 80vh;
+  min-height: 80vh;
+  width: 40%;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+#side-menu {
+
+  display: flex;
+  justify-content: center;
+  background-color: rgb(47, 47, 47);
+  padding: 20px;
+  max-height: 50vh;
+  border-radius: 10px;
+  min-height: 45vh;
+  width: 15vw;
+
+
+}
+
+.sidebar-active {
+  transform: translateX(10vw);
+
+}
+
+/* .............. UPLOAD ............... */
+
+#upload-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ /* width: 100%; */
+  /* height:30vh; */
+  background-color: rgb(43, 43, 43);
+  box-shadow: none;
+  padding: 10px;
+  padding-bottom: 30px;
+  transition: 0.3s ease;
+}
+
+#upload-form input {
+
+  background-color: rgba(240, 248, 255, 0);
+  border-bottom: 1px solid #00ffbf45;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #8a8a8a;
+}
+
+#upload-form input::placeholder {
+  color: rgb(93, 93, 93);
+}
+
+#upload-button {
+  border: none;
+  width: 100%;
+  /* background-color: rgb(62, 62, 62); */
+  padding: 5px;
+  height: 30px;
+  font-size: 12px;
+}
+
+#image-upload {
+
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+
+}
+
+#image-upload+label {
+  display: flex;
+  font-size: 15px;
+  font-weight: 200;
+  width: 80px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(110, 110, 110);
+  background-color: rgb(43, 43, 43);
+
+  margin: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+
+#image-upload+label:hover {
+  background-color: #00ffbf;
+  color: rgb(43, 43, 43);
+  cursor: pointer;
+}
+
+/* ........CANCEL BUTTON........... */
+
+#cancel-upload {
+
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+
+}
+
+#cancel-upload+label {
+  display: none;
+  font-size: 15px;
+  font-weight: 200;
+  width: 80px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(110, 110, 110);
+  background-color: rgb(43, 43, 43);
+
+  margin: 10px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+#cancel-upload:focus+label,
+#cancel-upload+label:hover {
+  background-color: rgb(60, 60, 60);
+  cursor: pointer;
+}
+
+input[type=file] {}
+
+#upload {
+  width: 100%;
+}
+
+
+.plus {
+  font-size: 25px;
+  font-weight: 100;
+  margin-right: 5px;
+  color: rgb(110, 110, 110);
+}
+
+#img-view {
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  /* padding-bottom:0; */
+  display: none;
+  height:150px;
+  width:250px;
+  border: 0.5px solid #00ffbf44;
+  border-radius: 5px;
+}

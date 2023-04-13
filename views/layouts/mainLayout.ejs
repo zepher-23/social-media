@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>layout</title>
+</head>
+<body>
+    <div id="header" class="flx-center-h flx-row">
+        <h2 id="logo" class="flx-center-h">SocialSphere</h2>
+
+       <div class="nav-options flx-row ">
+        <% if(loggedin){ %>
+        <h3  class="text-sec p-2">Profile</h3>
+        
+        <h3  class="text-sec p-2 pointer" onclick="menuClick()"> Menu</h3>
+               <a href="/logout" id="user-logout"class="primary p-3 flx-center flx "> Logout</a>
+
+        <% } else {%>
+        
+       <a href="<%= link %>" > <button id="user-logout" class="primary p-2"><%= userOption %></button></a>
+<% } %>
+       </div>
+        
+        
+    </div>
+
+    <div id="sidebar" class="hide-sidebar">
+
+    </div>
+
+</body>
+</html>

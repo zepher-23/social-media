@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+  <script src="/javascripts/script.js"></script>
+  <title>Signup</title>
+</head>
+
+<body class="">
+    
+  <%- include('./layouts/mainLayout',{userOption :'Login',link:'/login',loggedin:false}) %>
+  <form action="/signup/adduser" method="post" class="flx-column flx-center-h" id="login-form">
+    <h5>Sign Up</h5>
+<label for="name">Username</label>
+<input type="text" required placeholder="Name" name="name" id="name">
+
+    <label for="username">Email</label>
+    <input type="text" required placeholder="Email" name="email" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" required placeholder="Password" name="password" id="password">
+
+    <button type="submit">Sign up</button>
+    <div class="social">
+      <div class="go"> Google</div>
+      <div class="fb"> Github</div>
+    </div>
+    <% if(message) { %>
+    <h4 class="err flx-col flx-center-h"><%= message %></h4>
+    <% } %>
+  </form>
+</body>
+
+</html>

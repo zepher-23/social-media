@@ -1,0 +1,118 @@
+body {
+    background-color: RGB(43,43,43);
+}
+
+
+form#login-form{
+    /* height: 480px; */
+    width: 300px;
+    background-color: rgba(43, 43, 43, 0.442);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    /* backdrop-filter: blur(10px); */
+    /* border: 2px solid rgba(255, 255, 255, 0.1); */
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.366);
+    padding: 15px ;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h5 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    margin-top:10px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #e5e5e5;
+}
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #00ffbf;
+    background-color:rgb(43,43,43);
+    color: #00ffbf;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:0.2s ease-in-out;
+}
+button:hover{
+    background-color: #00ffbf;
+    color: rgb(43,43,43);
+}
+.social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social div {
+    
+    width: 115px;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.27);
+    color: #eaf0fb;
+    text-align: center;
+}
+
+.social div:hover {
+    background-color: rgba(255, 255, 255, 0.47);
+    cursor: pointer;
+}
+
+.social .fb {
+    margin-left: 25px;
+}
+
+.social i {
+    margin-right: 4px;
+}
+
+
+a {
+    text-decoration: none;
+}
+.err{
+    color:rgb(255, 93, 93);
+}

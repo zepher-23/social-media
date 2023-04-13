@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <script src="/javascripts/script.js"></script>
+    <title>feed</title>
+</head>
+<body>
+    <%- include('./layouts/mainLayout',{loggedin:true}) %>
+    
+    <!-- <h1 style="color:azure">this is the feed page,
+
+    <%= user %></h1> -->
+<div id="main">
+    <div id="feed">
+<form action="/postUpload"  method="POST" id="upload-form">
+<div style="display:flex;flex-direction:column">
+    <input type="text" name="caption" placeholder="Title..."/>
+    <input type="text" name="description" placeholder="Descritpion..."/>
+   </div>
+
+
+    <div style="display:flex;flex-direction:column;justify-content: center;width:300px; align-items: center;"> 
+        <img id="img-view" >
+    <div style="display:flex;flex-direction:row ;justify-content: center;">
+    
+    <input type="file" name="image" id="image-upload" onchange="viewImage(event)"/>
+    <label id="img-label" for="image-upload"><span class="plus" >+ </span> Image</label>
+       
+    <input type="button" name="cancel" id="cancel-upload" onclick="removeImage()" />
+    <label id="img-label" for="cancel-upload">Cancel</label>
+</div></div></form>
+
+    </div>
+    <div id="side-menu">
+        <div id="upload">
+            <button id="upload-button" onclick="handleUpload()"> <span class="plus">+ </span> Add Post </button>
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>
